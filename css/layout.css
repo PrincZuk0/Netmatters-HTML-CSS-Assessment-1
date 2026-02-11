@@ -1,1 +1,9 @@
-.members{display:grid;grid-template-columns:1fr;grid-template-rows:repeat(27, auto);row-gap:1rem}
+/* line 1, ../../Netmatters-HTML-CSS-Assessment-1/scss/layout.scss */
+.members {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(27, auto);
+  row-gap: 1rem;
+}
+
+/*# sourceMappingURL=layout.css.map */

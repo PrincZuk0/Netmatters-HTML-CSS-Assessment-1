@@ -1,0 +1,40 @@
+
+.slide {
+  position: relative;
+  height: 500px;
+  background-image:
+    linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0)), // dark fade
+    url('../images/slide/netmb.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  // centre it
+  text-align: center;
+  color: white;
+  width: 80%;
+}
+
+.slide-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: $blue-bg;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.arrow {
+  font-size: 1.2rem; // just sizing
+  line-height: 1;
+}

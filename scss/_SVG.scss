@@ -1,0 +1,24 @@
+
+svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Default icon class */
+.icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* Small */
+.icon--sm {
+  width: 14px;
+  height: 14px;
+}
+
+/* Large */
+.icon--lg {
+  width: 24px;
+  height: 24px;
+}

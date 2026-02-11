@@ -1,0 +1,105 @@
+.post-wrapper { 
+  overflow: hidden; // stops weird scroll stuff
+}
+
+/* header text above posts */
+
+.posts-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: calc(($post-width * 3) + ($post-gap * 2)); // keeps it lined up with posts
+  margin: 0 auto 1rem auto;
+}
+
+.left-label,
+.right-label {
+  font-weight: 700;
+}
+
+/* posts layout */
+
+.posts {
+  display: flex;
+  flex-direction: column; // stacked on mobile
+  gap: $post-gap;
+  justify-content: center;
+}
+
+.post {
+  flex: 1; 
+  background: #222;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-image {
+  height: 220px;
+  background: #444; // temp background
+}
+
+.post-text {
+  padding: 1rem;
+  color: white;
+}
+
+/* desktop layout */
+
+@media (min-width: $bp-desktop) {
+
+  .posts {
+    flex-direction: row; // 3 in a row
+  }
+
+}
+
+/* carousel under posts */
+
+.post-slider {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.post-track {
+  display: flex;
+  gap: 6rem;
+  padding: 1rem 0;
+  align-items: center;
+}
+
+.post-track img {
+  max-height: 62px;
+  height: auto;
+  width: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.post-track img:hover {
+  filter: grayscale(0%);
+}
+
+/* mobile label */
+
+.mobile-footer-label {
+  display: none;
+  text-align: right;
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+@media (max-width: $bp-tablet) {
+
+  .right-label {
+    display: none; // hide top one
+  }
+
+  .mobile-footer-label {
+    display: block;
+  }
+
+}
+

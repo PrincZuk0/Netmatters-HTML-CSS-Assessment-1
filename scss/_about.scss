@@ -1,0 +1,71 @@
+.about {
+  width: 100%;
+  background: $blue-bg;
+  padding: 2rem 0;   
+}
+
+.about-row {
+  display: flex;        
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.about-menu {
+  flex: 1;              
+}
+
+.btn-group {
+  margin-top: 1.5rem;
+}
+
+/* Stack columns on smaller screens */
+@media (max-width: $bp-tablet) {
+  .about-row {
+    flex-direction: column;
+  }
+
+  .btn-group {
+    margin-top: 1rem;
+  }
+}
+
+/* BUTTON STYLES */
+.btn {
+  font-size: 1.25rem;     
+  padding: 0.875rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-blue {
+  background: #1f3c88;
+}
+.btn-blue:hover {
+  background: #162d66;
+}
+
+.btn-dblue {
+  background: #153179;
+}
+.btn-dblue:hover {
+  background: #0b1f50;
+}
+
+.btn-green {
+  background: #2ca58d;
+}
+.btn-green:hover {
+  background: #1f7a68;
+}
+
+.star-rating {
+  font-size: 2rem;        /* size of the stars */
+  color: #f5c518;         
+  letter-spacing: 0.2rem; 
+  line-height: 1;
+}
+
+

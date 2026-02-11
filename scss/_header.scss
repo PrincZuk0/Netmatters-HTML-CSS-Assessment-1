@@ -1,0 +1,106 @@
+/* header stuff */
+
+.site-header {
+  width: 100%;
+  background: #1f1f1f;
+  padding: 0.8rem 1rem;   // smaller padding so it fits better
+  overflow: hidden;       // stops the page scrolling sideways
+}
+
+.header-inner {
+  display: flex;          // using flex so items sit in a row
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;            // spacing between things
+  width: 100%;
+}
+
+/* logo */
+
+.site-header img {
+  height: 42px;           // just made it smaller
+  width: auto;
+  max-width: 140px;       // stops it stretching too much
+  flex-shrink: 1;         // lets it shrink if needed
+}
+
+/* search bar - mobile first */
+
+.header-search {
+  flex: 1;                // takes leftover space
+  min-width: 0;           // needed or it overflows
+  padding: 0.8rem;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+
+  background: #555;       // grey on mobile
+  color: white;
+}
+
+/* buttons (hidden on mobile) */
+
+.header-btn {
+  display: none;          // only show on desktop
+  padding: 1rem 1.6rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.support-btn {
+  background: #007bff;    // blue one
+  color: white;
+}
+
+.contact-btn {
+  background: #555;       // darker one
+  color: white;
+}
+
+/* hamburger */
+
+.hamburger {
+  display: none;          // shows later in media query
+  width: 48px;
+  height: 48px;
+  background: #555;
+  flex-direction: column; // stacks the 3 lines
+  justify-content: center;
+  gap: 5px;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  background: white;
+  width: 100%;
+  display: block;
+}
+
+/* desktop changes */
+
+@media (min-width: $bp-desktop) {
+
+  .header-btn {
+    display: flex;        // now visible
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hamburger {
+    display: flex;        // also visible on desktop
+  }
+
+  .header-search {
+    flex: 0 0 220px;      // fixed width instead of stretching
+    background: white;    // switch to white on desktop
+    color: black;
+  }
+}
